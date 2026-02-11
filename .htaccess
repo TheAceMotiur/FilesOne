@@ -1,0 +1,176 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# -----------------------------------------------------------------------
+# Error Pages
+# -----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+	ErrorDocument 403 /e/403/
+	ErrorDocument 404 /e/404/
+	ErrorDocument 500 /e/500/
+</IfModule>
+
+# -----------------------------------------------------------------------
+# Block Nuisance Requests for Non-Existent Files
+# -----------------------------------------------------------------------
+
+<IfModule mod_alias.c>
+	RedirectMatch 403 (?i)\.php\.suspected
+	RedirectMatch 403 (?i)\.(git|well-known)
+	RedirectMatch 403 (?i)apple-app-site-association
+	RedirectMatch 403 (?i)/autodiscover/autodiscover.xml
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Compressing and Caching
+# ----------------------------------------------------------------------
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	AddType image/webp .webp
+
+	# Images
+	ExpiresByType image/jpeg "access plus 1 year"
+	ExpiresByType image/gif "access plus 1 year"
+	ExpiresByType image/png "access plus 1 year"
+	ExpiresByType image/webp "access plus 1 year"
+	ExpiresByType image/svg+xml "access plus 1 year"
+	ExpiresByType image/x-icon "access plus 1 year"
+
+	# Video
+	ExpiresByType video/webm "access plus 1 year"
+	ExpiresByType video/mp4 "access plus 1 year"
+	ExpiresByType video/mpeg "access plus 1 year"
+
+	# Fonts
+	ExpiresByType font/ttf "access plus 1 year"
+	ExpiresByType font/otf "access plus 1 year"
+	ExpiresByType font/woff "access plus 1 year"
+	ExpiresByType font/woff2 "access plus 1 year"
+	ExpiresByType application/font-woff "access plus 1 year"
+	ExpiresByType application/font-woff2 "access plus 1 year"
+
+	# CSS, JavaScript
+	ExpiresByType text/css "access plus 1 year"
+	ExpiresByType text/javascript "access plus 1 year"
+	ExpiresByType application/javascript "access plus 1 year"
+
+	# Others
+	ExpiresByType application/pdf "access plus 1 year"
+	ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE text/vtt 
+	AddOutputFilterByType DEFLATE text/x-component
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/js
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE application/x-httpd-php
+	AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+	AddOutputFilterByType DEFLATE application/atom+xml 
+	AddOutputFilterByType DEFLATE application/json
+	AddOutputFilterByType DEFLATE application/ld+json 
+	AddOutputFilterByType DEFLATE application/vnd.ms-fontobject 
+	AddOutputFilterByType DEFLATE application/x-font-ttf
+	AddOutputFilterByType DEFLATE application/font-woff2
+	AddOutputFilterByType DEFLATE application/x-font-woff
+	AddOutputFilterByType DEFLATE application/x-web-app-manifest+json font/woff
+	AddOutputFilterByType DEFLATE font/woff 
+	AddOutputFilterByType DEFLATE font/opentype
+	AddOutputFilterByType DEFLATE image/svg+xml
+	AddOutputFilterByType DEFLATE image/x-icon 
+</IfModule>
+
+<IfModule mod_headers.c>
+	<FilesMatch "\.(ico|pdf|flv|swf|js|mjs|css|gif|png|jpg|jpeg|webp|txt|woff2|woff)$">
+		Header set Cache-Control "max-age=31536000, public"
+	</FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|mjs|css|xml|gz)$">
+    Header append Vary Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+
+<IfModule mod_expires.c> 
+  <IfModule mod_headers.c> 
+    Header unset ETag 
+  </IfModule> 
+  FileETag None 
+</IfModule>
+
+<IfModule mod_headers.c>
+	<FilesMatch ".(js|mjs|css|xml|gz|html|woff|woff2|ttf)$">
+		Header append Vary: Accept-Encoding
+	</FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+	<Files manifest.json>
+        ExpiresActive On
+        ExpiresDefault "access plus 1 month"
+	</Files>
+</IfModule>
+
+# ----------------------------------------------------------------------
+#   Block some files from outside access
+# ----------------------------------------------------------------------
+
+# No access to the htaccess file
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+	Order allow,deny
+	Deny from all
+	Satisfy all
+</Files>
+
+# No access to the .env file
+<Files .env>
+	Order Allow,Deny
+	Deny from all
+	Satisfy all
+</Files>
+
+# No access to the env file
+<Files env>
+	Order Allow,Deny
+	Deny from all
+	Satisfy all
+</Files>
+
+# No access to the App.php
+<Files app.php>
+	Order allow,deny
+	Deny from all
+</Files>
+
+# No access to the Database.php
+<Files database.php>
+	Order allow,deny
+	Deny from all
+</Files>
+
+# Block access to config folder
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteRule ^app/config/ - [F,L]
+	RewriteRule !^config/ - [S=3]
+	RewriteRule ^config/[^/]+\.php$ - [F,L]
+</IfModule>
