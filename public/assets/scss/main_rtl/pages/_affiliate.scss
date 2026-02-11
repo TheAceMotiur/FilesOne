@@ -1,0 +1,159 @@
+/*------------------------------------------------------------------
+[8.1 - Affiliate page]
+*/
+.affiliate-boxes-area {
+    .affiliate-box {
+        cursor: default;
+        background: white;
+
+        &-icon {
+            width: 5.5rem;
+            height: 5.5rem;
+            color: var(--color-1);
+            border-radius: 50%;
+            @include transition(all 1s ease);
+        }
+
+        &:hover {
+            .affiliate-box-icon {
+                background: var(--color-1);
+                box-shadow: 0px 2px 30px rgba(var(--color-1-rgb),.1);
+                color: white;
+            }
+        }
+
+        &-title {
+            color: var(--color-2);
+            font-size: 1.5rem;
+            line-height: 1;
+            font-weight: 700;
+        }
+    }
+}
+
+.affiliate-table-area {
+    background: var(--color-3);
+
+    .country-rates-card {
+        height: 30rem;
+    }
+
+    table {
+        th, 
+        td {
+            font-size: 1.125rem;
+            color: var(--color-2);
+        }
+
+        &.table-scroll {
+            tbody {
+                position: absolute;
+                overflow-y: scroll;
+                height: 19.5rem;
+                padding-left: 1.5rem;
+            }
+
+            tr {
+                width: 100%;
+                table-layout: fixed;
+                display: inline-table;
+            }
+        }
+
+        tfoot {
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 2.5rem;
+
+            td {
+                border: none;
+                padding: 0;
+                font-size: .875rem;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: .5rem;
+        
+            &-track {
+                background: #f1f1f1;
+                border-radius: 1rem;
+            }
+        
+            &-thumb {
+                background: rgba(var(--color-2-rgb),.25);
+                border-radius: .5rem;
+            }
+        }
+    }
+}
+
+.affiliate-payments-area {
+    .payments-card {
+        border-radius: 1rem;
+        box-shadow: 0px 2px 30px rgba(var(--color-1-rgb),.05);
+
+        p {
+            font-size: 1.125rem;
+            color: var(--color-2);
+        }
+    }
+}
+
+.affiliate-statistics-area {
+    background: var(--color-3);
+    background-image: url("../image/affiliate-stats-bg.webp");
+    
+    .statistics-card-heading {
+        p {
+            color: var(--color-1);
+            font-weight: 700;
+    
+            @media (min-width: $breakpoint-medium) {
+                font-size: 1.5rem;
+            }
+    
+            @media (min-width: $breakpoint-small) and (max-width: $breakpoint-md) {
+                font-size: 1.25rem;
+            }
+        }
+    
+        h2 {
+            color: var(--color-2);
+            font-weight: 800;
+    
+            @media (min-width: $breakpoint-medium) {
+                font-size: 2.5rem;
+            }
+    
+            @media (min-width: $breakpoint-small) and (max-width: $breakpoint-md) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .stats-box {
+        &-icon {
+            width: 4rem;
+            height: 4rem;
+            background: rgba(var(--color-1-rgb),.05);
+            border-radius: 50%;
+
+            i {
+                color: var(--color-1);
+            }
+        }
+
+        &-text {
+            color: var(--color-2);
+            font-weight: 800;
+            font-size: 2rem;
+        }
+
+        &-subtext {
+            color: var(--color-2);
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+    }
+}

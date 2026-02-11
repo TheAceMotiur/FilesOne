@@ -1,0 +1,122 @@
+/*------------------------------------------------------------------
+[8.6 - File page]
+*/
+.file-area {
+    .file-preview {
+        &-inner {
+            border: 4px dashed var(--color-3);
+            border-radius: 1rem;
+            min-height: 220px;
+
+            @media (min-width: $breakpoint-medium) {
+                width: 75%;
+            }
+
+            @media (max-width: $breakpoint-md) {
+                width: 100%;
+            }
+
+            p:not(.recaptcha) {
+                font-weight: 900;
+                color: rgba(var(--color-1-rgb),.2);
+
+                @media (min-width: $breakpoint-medium) {
+                    font-size: 2.5rem;
+                }
+        
+                @media (max-width: $breakpoint-md) {
+                    font-size: 1.75rem;
+                }
+
+                &.file-deleted {
+                    font-size: 1.5rem;
+                }
+
+                .file-404-title {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .base-timer {
+        width: 5rem;
+        height: 5rem;
+
+        svg {
+            transform: scaleX(-1);
+
+            g {
+                fill: none;
+                stroke: none;
+            }
+
+            circle {
+                stroke-width: 7px;
+                stroke: var(--color-3);
+            }
+
+            .base-timer-remaining {
+                stroke-width: 7px;
+                stroke-linecap: round;
+                transform: rotate(90deg);
+                transform-origin: center;
+                fill-rule: nonzero;
+                stroke: rgba(var(--color-2-rgb),.8);
+                @include transition(all 1s linear);
+            }
+        }
+
+        &-label {
+            width: 5rem;
+            height: 5rem;
+            top: 0;
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: rgba(var(--color-2-rgb),.8);
+        }
+    }
+
+    .file-input {
+        input {
+            border-width: 2px;
+            direction: ltr;
+            text-align: right;
+
+            &:focus {
+                border-color: var(--color-3) !important;
+            }
+        }
+
+        .btn {
+            color: var(--color-1) !important;
+            font-weight: 500;
+            border-style: solid;
+            border-width: 2px 0 2px 2px;
+            border-color: var(--color-3);
+            border-radius: 1rem 0 0 1rem;
+            padding: .75rem 2rem;
+
+            &:focus,
+            &:active {
+                border-color: var(--color-3) !important;
+            }
+        }
+    }
+
+    .file-info {
+        color: var(--color-2);
+    }
+
+    .adblocker-notice {
+        i {
+            color: var(--color-1);
+        }
+
+        p {
+            color: var(--color-2);
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+    }
+}

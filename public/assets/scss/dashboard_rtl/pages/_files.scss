@@ -1,0 +1,48 @@
+/*------------------------------------------------------------------
+[7.2 - Files]
+*/
+.files-overview-card {
+    .card {
+        border: 2px dashed var(--color-1);
+
+        @media (max-width: $breakpoint-sm) {
+            .count {
+                font-size: 1.125rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+#files-table-search,
+#reports-table-search {
+    .input-group {
+        @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-xxl) {
+            input, select {
+                border-radius: 1rem;
+                width: 40%;
+                margin-right: .25rem;
+                margin-left: .25rem;
+            }
+
+            input[name=filename] {
+                width: 100%;
+            }
+
+            button {
+                border-radius: 1rem;
+                width: 48.65%;
+                margin-right: .25rem;
+                margin-left: .25rem;
+            }
+        }
+
+        @media (max-width: $breakpoint-md) {
+            input, select, button {
+                border-radius: 1rem;
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+/*------------------------------------------------------------------
+[8.8 - Install page]
+*/
+.install-page {
+    img {
+        width: 160px;
+    }
+
+    .loader {
+        color: var(--color-1);
+    }
+
+    h2 {
+        color: var(--color-2);
+        font-size: 1.75rem;
+        font-weight: 700;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 2rem;
+            height: .25rem;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-1);
+            border-radius: 1rem;
+        }
+    }
+
+    p:not(.text-md):not(.install-error) {
+        color: var(--color-2);
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .finish-text {
+        color: var(--color-6);
+    }
+
+    .checker-card {
+        border: 2px dashed var(--color-3);
+        border-radius: 1rem;
+    }
+
+    .btn-color-1 {
+        font-size: 1.125rem;
+    }
+
+    .form-floating {
+        color: var(--color-2);
+    }
+}

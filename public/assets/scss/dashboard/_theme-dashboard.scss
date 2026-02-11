@@ -1,0 +1,411 @@
+/*------------------------------------------------------------------
+[2 - Theme]
+*/
+html.dark-mode {
+    .dashboard-content,
+    .offcanvas-body,
+    #side-menu .offcanvas-header,
+    .overview-card .icon,
+    .gridjs-tr:hover,
+    .file-preview-inner,
+    .file-dropdown,
+    .dropdown-menu:not(.file-dropdown) .dropdown-item:hover,
+    .modal .settings-container {
+        background: var(--dark-bg-color) !important;
+    }
+
+    .card,
+    .offcanvas-content .offcanvas-header,
+    .modal-content,
+    .dropzone-tools,
+    .result-button {
+        background: var(--dark-color) !important;
+    }
+
+    h1, h2, h3, h4, h5, h6, p,
+    .form-label,
+    .form-check .form-check-label,
+    .form-switch .form-check-label,
+    .card-heading,
+    .dropdown-item,
+    input.gridjs-input,
+    .gridjs-container,
+    th.gridjs-th,
+    .gridjs-pagination .gridjs-pages button,
+    .plan-card .plan-features li,
+    .dropzone .upload-info-text,
+    .dropzone .dropzone-file-info,
+    .dropzone .dropzone-processing,
+    .dropzone .file-extension span,
+    pre {
+        color: var(--dark-text-color) !important;
+    }
+
+    .topbar,
+    .dropdown-menu:not(.file-dropdown),
+    .file-dropdown .dropdown-item:hover,
+    .form-check .form-check-input,
+    .form-switch .form-check-input,
+    .gridjs-footer,
+    input.gridjs-input,
+    .gridjs-pagination .gridjs-pages button,
+    .gridjs-pagination .gridjs-pages button:disabled {
+        background-color: var(--dark-color);
+        border-color: var(--dark-border-1) !important;
+    }
+
+    .gridjs-pagination .gridjs-pages button.gridjs-currentPage,
+    .modal .verify-icon {
+        color: var(--color-1) !important;
+    }
+
+    .dashboard-sidebar {
+        background: var(--dark-color);
+        border-color: var(--dark-border-1);
+
+        .sidebar-logo {
+            border-color: var(--dark-border-1);
+        }
+
+        .nav-link {
+            color: var(--dark-text-color) !important;
+
+            &.active {
+                background: var(--color-1) !important;
+
+                > .sidebar-i,
+                > .sidebar-t {
+                    color: var(--dark-text-color) !important;
+                }
+
+                .sidebar-badge {
+                    background: var(--dark-bg-color);
+                }
+            }
+
+            &:not(.active):hover {
+                background: var(--dark-bg-color) !important;
+            }
+        }
+    }
+
+    .offcanvas-thumb,
+    .gridjs-head,
+    .gridjs-wrapper,
+    th.gridjs-th,
+    .gridjs-tbody > .gridjs-tr:not(:last-child),
+    .files-overview-card .card {
+        border-color: var(--dark-border-1);
+    }
+
+    .dropzone-previews-inner,
+    .dropzone-tools,
+    .result-button {
+        border-color: var(--dark-border-1) !important;
+    }
+
+    .avatar {
+        outline-color: var(--dark-border-1);
+    }
+
+    .btn-color-1:hover {
+        background: var(--dark-bg-color) !important;
+        border-color: var(--dark-bg-color) !important;
+    }
+
+    .btn-color-4,
+    .dropzone .open-file,
+    .dropzone .file-extension {
+        color: var(--dark-text-color) !important;
+        background: var(--dark-bg-color) !important;
+        border-color: var(--dark-bg-color) !important;
+    }
+
+    .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+    }
+
+    .action-button {
+        background: var(--dark-bg-color) !important;
+        color: var(--dark-text-color) !important;
+
+        &:active,
+        &.show  {
+            border-color: var(--dark-bg-color) !important;
+        }
+
+        > label {
+            color: var(--dark-text-color) !important;
+        }
+
+        .btn-check:checked +.btn {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
+    }
+
+    .offcanvas-content .detail-card {
+        border-color: var(--dark-border-1);
+
+        .content {
+            color: var(--dark-text-color);
+
+            i {
+                color: var(--color-1);
+            }
+        }
+    }
+
+    .form-control,
+    .form-select {
+        background-color: var(--dark-color) !important;
+        color: var(--dark-text-color) !important;
+        border-color: var(--dark-border-1) !important;
+
+        &::placeholder {
+            color: var(--dark-text-color) !important;
+            opacity: .75;
+        }
+    }
+
+    .form-select {
+        background-image: url("../image/chevron-light.svg") !important;
+    }
+
+    input[type=file]::-webkit-file-upload-button {
+        background: var(--dark-bg-color) !important;
+        color: var(--dark-text-color) !important;
+    }
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px var(--dark-color) inset;
+        -webkit-text-fill-color: var(--dark-text-color);
+    }
+
+    textarea {
+        &::-webkit-scrollbar-corner {
+            border-color: var(--dark-border-1);
+            background-color: var(--dark-color);
+        }
+          
+        &::-webkit-scrollbar {
+            background-color: var(--dark-bg-color);
+        }
+          
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--dark-color);
+            border-radius: 1rem;
+            border: 4px solid transparent;
+            background-clip: padding-box;
+        }
+    }
+
+    .scroll-light::-webkit-scrollbar {
+        &-track {
+            background: var(--dark-bg-color) !important;
+        }
+
+        &-thumb {
+            background: var(--dark-border-2) !important;
+        }
+    }
+
+    .os-theme-dark {
+        --os-handle-bg: var(--dark-border-2) !important;
+        --os-handle-bg-hover: var(--dark-bg-color) !important;
+        --os-handle-bg-active: var(--dark-bg-color) !important;
+    }
+
+    .alert-1 {
+        color: var(--dark-text-color);
+        background: var(--color-5);
+    }
+    
+    .alert-2 {
+        color: var(--dark-text-color);
+        background: var(--color-6);
+    }
+
+    .alert-3 {
+        color: var(--dark-text-color);
+        background: var(--color-1);
+    }
+
+    .img-container,
+    .bg-container,
+    .bg-container-2 {
+        background: var(--dark-color);
+        border: 1px solid var(--dark-border-1);
+    }
+
+    .setting-tabs .nav-link {
+        color: var(--dark-text-color);
+
+        &.active {
+            background: var(--dark-bg-color);
+        }
+    }
+
+    .apexcharts-text,
+    .apexcharts-title-text,
+    .apexcharts-legend-text {
+        fill: var(--dark-text-color) !important;
+        color: var(--dark-text-color) !important;
+    }
+
+    .apexcharts-xcrosshairs,
+    .apexcharts-xaxis-tick,
+    .apexcharts-gridline {
+        stroke: var(--dark-border-1) !important;
+    }
+
+    .apexcharts-tooltip {
+        background: var(--dark-color) !important;
+        border-color: var(--dark-border-1) !important;
+
+        &-text {
+            color: var(--dark-text-color) !important;
+        }
+
+        .apexcharts-tooltip-title {
+            color: var(--dark-text-color) !important;
+            background: var(--dark-color) !important;
+            border-color: var(--dark-border-1) !important;
+        }
+    }
+
+    .ck.ck-editor {
+        &__main>.ck-editor__editable {
+            background: var(--dark-color);
+            border-color: var(--dark-border-1);
+
+            pre code {
+                color: var(--dark-text-color);
+            }
+        }
+
+        .ck.ck-reset_all * {
+            color: var(--dark-text-color);
+        }
+    }
+
+    .ck.ck-toolbar {
+        background: var(--dark-color);
+        border-color: var(--dark-border-1);
+
+        &__separator {
+            background: var(--dark-border-1) !important;
+        }
+
+        .ck.ck-button,
+        a.ck.ck-button {
+            &:active,
+            &:focus {
+                box-shadow: none;
+            }
+
+            &.ck-on {
+                background: var(--dark-color);
+            }
+
+            &:not(.ck-disabled) {
+                &:hover,
+                &:active {
+                    background: var(--dark-bg-color);
+                }
+            }
+        }
+
+        .ck.ck-dropdown__panel {
+            background: var(--dark-bg-color);
+            border-color: var(--dark-border-1);
+
+            .ck-list {
+                background: var(--dark-color);
+
+                &__item .ck-button.ck-on {
+                    background: var(--color-1);
+                }
+            }
+
+            .ck-input {
+                background: var(--dark-color);
+                box-shadow: none;
+            }
+        }
+    }
+
+    .dropzone {
+        background: var(--dark-color);
+
+        .dropzone-toolbar i {
+            color: var(--dark-text-color);
+        }
+
+        ::-webkit-scrollbar {
+            &-track {
+                background: var(--dark-bg-color) !important;
+            }
+
+            &-thumb {
+                background: var(--dark-border-2) !important;
+            }
+        }
+    }
+
+    .table-custom {
+        border-color: var(--dark-border-1);
+
+        tr,
+        th {
+            border-color: var(--dark-border-1);
+        }
+
+        th,
+        td {
+            color: var(--dark-text-color);
+        }
+
+        .table {
+            --bs-table-bg: var(--dark-color);
+
+            &-hover>tbody>tr:hover>* {
+                --bs-table-bg-state: var(--dark-bg-color);
+            }
+        }
+    }
+
+    .pagination {
+        .page-item {
+            .page-link {
+                color: var(--dark-text-color);
+                background: var(--dark-color);
+                border: 1px solid var(--dark-border-1);
+    
+                &.disabled {
+                    color: var(--dark-text-color);
+                    background: var(--dark-color);
+                }
+    
+                &:hover {
+                    background-color: var(--dark-bg-color);
+                }
+            }
+    
+            &:last-child .page-link {
+                border-right: 1px solid var(--dark-border-1);
+            }
+        }
+    }
+
+    .popover {
+        &-arrow::after {
+            border-bottom-color: var(--dark-bg-color) !important;
+        }
+        
+        &-body {
+            background: var(--dark-bg-color) !important;
+            color: var(--dark-text-color) !important;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------
+[7.3 - Overview]
+*/
+.overview-card {
+    .count {
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--color-2);
+    }
+
+    .title {
+        font-size: 1.125rem;
+        color: var(--color-2);
+    }
+
+    .icon {
+        background: rgba(var(--color-1-rgb),.1);
+        color: var(--color-1);
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+}

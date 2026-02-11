@@ -1,0 +1,41 @@
+/*------------------------------------------------------------------
+[1 - Variables]
+*/
+// Colors
+$colors: (
+    "1": #6d28d9,
+    "2": #334155,
+    "3": #f7f7fc,
+    "4": #14855f,
+    "5": #a91d3a,
+    "6": #006769
+);
+
+:root {
+    @each $color, $value in $colors {
+        --color-#{$color}: #{$value};
+    }
+    @each $color, $value in $colors {
+        --color-#{$color}-rgb: #{red($value)}, #{green($value)}, #{blue($value)};
+    }
+}
+
+:root {
+    --dark-text-color: #f7f7f7;
+    --dark-color: #232323;
+    --dark-bg-color: #121212;
+    --dark-border-1: rgba(242,243,249,.1);
+    --dark-border-2: rgba(242,243,249,.25);
+}
+
+// Breakpoints
+$breakpoint-sm: 575.98px;
+$breakpoint-small: 576px;
+$breakpoint-md: 767.98px;
+$breakpoint-medium: 768px;
+$breakpoint-lg: 991.98px;
+$breakpoint-large: 992px;
+$breakpoint-xl: 1199.98px;
+$breakpoint-x-large: 1200px;
+$breakpoint-xxl: 1399.98px;
+$breakpoint-xx-large: 1400px;

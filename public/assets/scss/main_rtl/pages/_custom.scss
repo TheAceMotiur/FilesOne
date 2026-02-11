@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------
+[8.5 - Custom page]
+*/
+.custom-page {
+    p, ul {
+        font-size: 1.125rem;
+        color: var(--color-2);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-2);
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 2rem;
+    }
+}

@@ -1,0 +1,47 @@
+/*------------------------------------------------------------------
+[3 - Spacing]
+*/
+.home-features-area,
+.blog-page,
+.blog-inner-page,
+.contact-form-area,
+.pricing-faqs-area,
+.pay-page,
+.affiliate-boxes-area,
+.affiliate-table-area,
+.affiliate-payments-area,
+.affiliate-faqs-area,
+.custom-page,
+.subscription-card {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.contact-boxes-area,
+.pricing-plans-area,
+.footer-inner {
+    padding-top: 7rem;
+}
+
+.affiliate-statistics-area {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.page-header .container {
+    @media (min-width: $breakpoint-xx-large) {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    @media (max-width: $breakpoint-xxl) {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+}
+
+.home-header-area .container,
+.file-area {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}

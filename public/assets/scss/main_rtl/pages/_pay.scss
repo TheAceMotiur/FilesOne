@@ -1,0 +1,46 @@
+/*------------------------------------------------------------------
+[8.10 - Pay page]
+*/
+.pay-page {
+    .product-details {
+        &-title {
+            color: var(--color-2);
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        &-text {
+            color: var(--color-2);
+            font-size: 1.125rem;
+
+            i {
+                color: var(--color-1);
+            }
+        }
+    }
+
+    .payment-terms,
+    .payment-method {
+        background: rgba(var(--color-1-rgb),.05);
+        border-radius: 1rem;
+
+        a {
+            color: var(--color-1);
+        }
+    }
+
+    .payment-methods {
+        .form-check {
+            padding: 1rem 2.375rem 1rem 1rem;
+            
+            &-label {
+                font-weight: 500;
+                line-height: 1;
+            }
+        }
+    }
+
+    button > i {
+        transform: scaleX(-1);
+    }
+}

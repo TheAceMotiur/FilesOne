@@ -1,0 +1,44 @@
+/*------------------------------------------------------------------
+[Table of contents]
+1 — Variables
+2 — Theme
+3 — Components
+    3.1 — Form
+    3.2 — Card
+    3.3 — Buttons
+    3.4 — Background
+    3.5 — Badges
+    3.6 — Alert
+    3.7 — Scroll
+    3.8 — Dropdown
+    3.9 — Dropzone
+4 — Modals
+5 — Global
+    5.1 — General
+    5.2 — Editor
+    5.3 — Chart
+    5.4 — Table
+6 — Layout
+7 — Pages
+    7.1 — Api
+    7.2 — Files
+    7.3 — Overview
+    7.4 — Payments
+    7.5 — Settings
+-------------------------------------------------------------------*/
+
+// Abstracts
+@import "variables-dashboard";
+@import "mixins-dashboard";
+
+// Theme
+@import "theme-dashboard";
+
+// Layout & Components
+@import "components-dashboard";
+@import "modals-dashboard";
+@import "global-dashboard";
+@import "layout-dashboard";
+
+// Pages
+@import "pages-dashboard";

@@ -1,0 +1,34 @@
+// Background
+@mixin base-bg ($size) {
+    background-size: $size !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+// Button
+@mixin base-button ($color, $background, $border) {
+    color: $color !important;
+    background: $background !important;
+    border-color: $border !important;
+    border-radius: 1rem;
+    padding: .75rem 1.25rem;
+    font-weight: 500;
+}
+
+// Transition
+@mixin transition ($x) {
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    -ms-transition: $x;
+    -o-transition: $x;
+    transition: $x;
+}
+
+// Alert
+@mixin alert-style ($color, $background) {
+    color: $color;
+    background: $background;
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 .05rem .1rem rgba(0,0,0,.05);
+}

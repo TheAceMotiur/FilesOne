@@ -1,0 +1,46 @@
+/*------------------------------------------------------------------
+[8.2 - Auth page]
+*/
+.auth-page {
+    .auth-title {
+        color: var(--color-2);
+        font-size: 1.75rem;
+        font-weight: 800;
+    }
+
+    .auth-subtitle {
+        color: var(--color-2);
+        font-size: 1.25rem;
+    }
+
+    .social-auth {
+        .btn {
+            color: var(--color-2);
+            border: 1px solid var(--color-3);
+            border-radius: 1rem;
+            padding: .75rem 1.25rem;
+        }
+
+        img {
+            height: 1.125rem;
+        }
+    }
+
+    .auth-or {
+        color: var(--color-2);
+
+        > div {
+            line-height: 1;
+        }
+    }
+
+    a {
+        color: var(--color-1);
+    }
+
+    .auth-bottom {
+        a {
+            font-weight: 600;
+        }
+    }
+}

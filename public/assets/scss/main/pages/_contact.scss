@@ -1,0 +1,80 @@
+/*------------------------------------------------------------------
+[8.4 - Contact page]
+*/
+.contact-boxes-area {
+    .contact-box {
+        cursor: default;
+        background: white;
+
+        &-icon {
+            width: 5rem;
+            height: 5rem;
+            border: 1px dashed var(--color-1);
+            border-radius: 50%;
+            z-index: 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                top: 0;
+                left: 0;
+                background: rgba(var(--color-1-rgb),.1);
+                border-radius: 50%;
+                transform-origin: left top;
+                @include transition(transform .5s ease);
+                z-index: -1;
+            }
+
+            i {
+                color: var(--color-1);
+            }
+        }
+
+        &:hover {
+            .contact-box-icon::before {
+                transform: scale(2.5);
+            }
+        }
+
+        &-title {
+            color: var(--color-2);
+            font-size: 1.5rem;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        &-subtitle {
+            color: var(--color-2);
+            font-size: 1.125rem;
+        }
+    
+        &-text {
+            color: var(--color-2);
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.contact-form-area {
+    .contact-image {
+        width: 44rem;
+        height: 44rem;
+        left: 0;
+        border: .5rem solid white;
+        box-shadow: 0 .05rem .5rem rgba(0,0,0,.05);
+        border-radius: 2rem;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        .form-card {
+            margin-top: 4rem;
+        }
+    }
+
+    .form-control {
+        background: var(--color-3);
+    }
+}

@@ -1,0 +1,51 @@
+/*------------------------------------------------------------------
+[5 - Modals]
+*/
+.modal {
+    &-content {
+        border: 0;
+        border-radius: 2rem;
+
+        i {
+            color: var(--color-1);
+        }
+    }
+
+    &-header {
+        border: 0;
+        padding: 2rem;
+    }
+
+    &-title {
+        color: var(--color-2);
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    &-body {
+        padding: 2rem;
+    }
+
+    &-footer {
+        justify-content: center;
+        border: 0;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    &-lg {
+        @media (min-width: $breakpoint-large) {
+            width: 650px !important;
+        }
+    }
+
+    &#settings-modal {
+        .modal-footer {
+            padding: 2rem;
+        }
+    }
+
+    .settings-container {
+        background: var(--color-3);
+        border-radius: 1rem;
+    }
+}

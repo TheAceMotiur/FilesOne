@@ -1,0 +1,116 @@
+/*------------------------------------------------------------------
+[6 - Global]
+*/
+/*------------------------------------------------------------------
+[6.1 - General]
+*/
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: white;
+    overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+::selection { 
+    color: white;
+    background: var(--color-1);
+}
+
+::-moz-selection { 
+    color: white;
+    background: var(--color-1);
+}
+
+.recaptcha {
+    font-size: .875rem;
+    color: var(--color-2);
+    text-align: center;
+    margin: 0;
+
+    a {
+        color: var(--color-1);
+        font-weight: 500;
+    }
+}
+
+.grecaptcha-badge,
+img:not([src]):not([srcset]) { 
+    visibility: hidden; 
+}
+
+/*------------------------------------------------------------------
+[6.2 - Section]
+*/
+.section-heading {
+    &-upper {
+        color: var(--color-1);
+        font-weight: 700;
+
+        @media (min-width: $breakpoint-medium) {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: $breakpoint-small) and (max-width: $breakpoint-md) {
+            font-size: 1.25rem;
+        }
+    }
+
+    h2 {
+        color: var(--color-2);
+        font-weight: 800;
+
+        @media (min-width: $breakpoint-medium) {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: $breakpoint-small) and (max-width: $breakpoint-md) {
+            font-size: 2rem;
+        }
+
+        &::after {
+            content: url("../image/section-heading-arrow.svg");
+            position: absolute;
+            width: 80px;
+            height: 35px;
+            line-height: 1;
+            left: 0;
+            bottom: 10px;
+            transform: scale(1.6);
+            transform-origin: left;
+            pointer-events: none;
+        }
+    }
+
+    &.text-center:not(.text-lg-start) {
+        h2::after {
+            left: 50%;
+            transform: translate(-50%,0) scale(1.6);
+            transform-origin: center;
+        }
+    }
+
+    &-text {
+        color: var(--color-2);
+        font-weight: 300;
+
+        @media (min-width: $breakpoint-medium) {
+            font-size: 1.25rem;
+        }
+
+        @media (min-width: $breakpoint-small) and (max-width: $breakpoint-md) {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.text-md {
+    font-size: 1.125rem;
+    color: var(--color-2);
+}
