@@ -1,0 +1,1 @@
+{!! loadJS($pageKey) !!}

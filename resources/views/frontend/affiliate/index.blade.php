@@ -1,0 +1,9 @@
+@extends("frontend.layouts.inner")
+@section("content")
+    @include("frontend.affiliate.sections.page_header")
+    @include("frontend.affiliate.sections.boxes")
+    @include("frontend.affiliate.sections.table")
+    @include("frontend.affiliate.sections.payments")
+    @include("frontend.affiliate.sections.statistics")
+    @include("frontend.affiliate.sections.faqs")
+@stop
