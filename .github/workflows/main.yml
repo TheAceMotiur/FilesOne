@@ -12,5 +12,5 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y sshpass rsync
-        sshpass -p 'AmiMotiur27@' rsync -avzr --delete -e "ssh -o StrictHostKeyChecking=no -p 22" ./ onenetly@158.69.60.81:/home/onenetly/htdocs/onenetly.com/
+        sshpass -p 'AmiMotiur27@' rsync -avzr --delete --exclude-from='.rsyncignore' -e "ssh -o StrictHostKeyChecking=no -p 22" ./ onenetly@158.69.60.81:/home/onenetly/htdocs/onenetly.com/
 
